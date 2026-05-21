@@ -1,0 +1,12 @@
+# Datos originales e intermedios
+data_procesada/
+web/
+
+# Notebooks y scripts de trabajo
+*.ipynb
+__pycache__/
+*.pyc
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
