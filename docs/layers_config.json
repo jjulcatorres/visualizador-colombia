@@ -72,10 +72,10 @@
         "nombre": "Zonas de Protección y Desarrollo de los Recursos Naturales Renovables",
         "archivo": "data/zonas_proteccion_desarrollo_recursos_naturales.geojson",
         "estilo": {
-          "color": "#1b7837",
-          "fillColor": "#1b7837",
-          "fillOpacity": 0.33,
-          "weight": 1.3
+          "color": "#b2df8a",
+          "fillColor": "#74c476",
+          "fillOpacity": 0.28,
+          "weight": 1.8
         },
         "visible": false
       },
