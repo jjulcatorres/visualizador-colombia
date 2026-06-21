@@ -386,14 +386,32 @@
     function popupContenido(feature) {
       const p = feature.properties || {};
       const nombre = p.nombre || "Sin nombre";
-      const grupo = p.grupo || "";
-      const capa = p.capa || "";
 
-      return `
-        <strong>${normalizarTexto(nombre)}</strong><br>
-        <span><b>Grupo:</b> ${normalizarTexto(grupo)}</span><br>
-        <span><b>Capa:</b> ${normalizarTexto(capa)}</span>
-      `;
+      const camposOcultos = new Set(["nombre", "grupo", "capa"]);
+
+      let html = `<strong>${normalizarTexto(nombre)}</strong>`;
+
+      Object.keys(p).forEach(function(key) {
+        if (camposOcultos.has(key)) {
+          return;
+        }
+
+        const valor = p[key];
+
+        if (
+          valor === null ||
+          valor === undefined ||
+          String(valor).trim() === "" ||
+          String(valor).toLowerCase() === "null" ||
+          String(valor).toLowerCase() === "nan"
+        ) {
+          return;
+        }
+
+        html += `<br><span><b>${normalizarTexto(key)}:</b> ${normalizarTexto(valor)}</span>`;
+      });
+
+      return html;
     }
 
     function crearCapaGeoJson(data, capaConfig) {
