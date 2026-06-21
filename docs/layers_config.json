@@ -49,7 +49,7 @@
         "archivo": "data/paramo_referencia.geojson",
         "estilo": {
           "color": "#7af8ac",
-          "fillColor": "7af8ac",
+          "fillColor": "#7af8ac",
           "fillOpacity": 0.32,
           "weight": 1.3
         },
