@@ -1,28 +1,28 @@
 [
   {
-    "grupo": "Contrato y Solicitudes",
+    "grupo": "Títulos y solicitudes",
     "capas": [
       {
         "id": "solicitud_vigente_filt",
-        "nombre": "solicitud vigente filt",
+        "nombre": "Solicitudes vigentes",
         "archivo": "data/solicitud_vigente_filt.geojson",
         "estilo": {
-          "color": "#f28e2b",
-          "fillColor": "#f28e2b",
-          "fillOpacity": 0.45,
-          "weight": 1.2
+          "color": "#7570b3",
+          "fillColor": "#7570b3",
+          "fillOpacity": 0.38,
+          "weight": 1.3
         },
         "visible": false
       },
       {
         "id": "titulo_vigente_filt",
-        "nombre": "titulo vigente filt",
+        "nombre": "Títulos activos",
         "archivo": "data/titulo_vigente_filt.geojson",
         "estilo": {
-          "color": "#f28e2b",
-          "fillColor": "#f28e2b",
+          "color": "#d95f02",
+          "fillColor": "#d95f02",
           "fillOpacity": 0.45,
-          "weight": 1.2
+          "weight": 1.4
         },
         "visible": false
       }
@@ -32,204 +32,132 @@
     "grupo": "Áreas ambientales excluibles",
     "capas": [
       {
-        "id": "area_no_apta_mineria_sabana_bogota",
-        "nombre": "area no apta mineria sabana bogota",
-        "archivo": "data/area_no_apta_mineria_sabana_bogota.geojson",
-        "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
-        },
-        "visible": false
-      },
-      {
-        "id": "ecosistemas_marinos_costeros",
-        "nombre": "ecosistemas marinos costeros",
-        "archivo": "data/ecosistemas_marinos_costeros.geojson",
-        "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
-        },
-        "visible": false
-      },
-      {
-        "id": "nacimiento_agua_poli",
-        "nombre": "nacimiento agua poli",
-        "archivo": "data/nacimiento_agua_poli.geojson",
-        "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
-        },
-        "visible": false
-      },
-      {
         "id": "paramo_delimitado",
-        "nombre": "paramo delimitado",
+        "nombre": "Páramo delimitado",
         "archivo": "data/paramo_delimitado.geojson",
         "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
+          "color": "#006d2c",
+          "fillColor": "#006d2c",
           "fillOpacity": 0.35,
-          "weight": 0.8
+          "weight": 1.1
         },
         "visible": false
       },
       {
         "id": "paramo_referencia",
-        "nombre": "paramo referencia",
+        "nombre": "Páramo de referencia",
         "archivo": "data/paramo_referencia.geojson",
         "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
-        },
-        "visible": false
-      },
-      {
-        "id": "reserva_forestal_protectora_productora",
-        "nombre": "reserva forestal protectora productora",
-        "archivo": "data/reserva_forestal_protectora_productora.geojson",
-        "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#31a354",
+          "fillColor": "#31a354",
+          "fillOpacity": 0.32,
+          "weight": 1.1
         },
         "visible": false
       },
       {
         "id": "sistema_area_protegida_excluible",
-        "nombre": "sistema area protegida excluible",
+        "nombre": "Área Natural Protegida - SINAP",
         "archivo": "data/sistema_area_protegida_excluible.geojson",
         "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
-        },
-        "visible": false
-      },
-      {
-        "id": "sitio_ramsar",
-        "nombre": "sitio RAMSAR",
-        "archivo": "data/sitio_ramsar.geojson",
-        "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#238b45",
+          "fillColor": "#238b45",
+          "fillOpacity": 0.34,
+          "weight": 1.1
         },
         "visible": false
       },
       {
         "id": "zonas_proteccion_desarrollo_recursos_naturales",
-        "nombre": "zonas proteccion desarrollo recursos naturales",
+        "nombre": "Zonas de Protección y Desarrollo de los Recursos Naturales Renovables",
         "archivo": "data/zonas_proteccion_desarrollo_recursos_naturales.geojson",
         "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#00441b",
+          "fillColor": "#00441b",
+          "fillOpacity": 0.34,
+          "weight": 1.1
         },
         "visible": false
       },
       {
         "id": "zonificacion_ambiental_excluible",
-        "nombre": "zonificacion ambiental excluible",
+        "nombre": "Distritos Regionales de Manejo Integrado",
         "archivo": "data/zonificacion_ambiental_excluible.geojson",
         "estilo": {
-          "color": "#1b9e77",
-          "fillColor": "#1b9e77",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#1b7837",
+          "fillColor": "#1b7837",
+          "fillOpacity": 0.34,
+          "weight": 1.1
         },
         "visible": false
       }
     ]
   },
   {
-    "grupo": "Áreas Ambientales Restringidas",
+    "grupo": "Áreas ambientales restringidas",
     "capas": [
       {
         "id": "reserva_forestales_ley",
-        "nombre": "reserva forestales ley",
+        "nombre": "Reserva Forestal de Ley Segunda",
         "archivo": "data/reserva_forestales_ley.geojson",
         "estilo": {
-          "color": "#7570b3",
-          "fillColor": "#7570b3",
-          "fillOpacity": 0.35,
-          "weight": 0.8
-        },
-        "visible": false
-      },
-      {
-        "id": "zona_compensacion",
-        "nombre": "zona compensacion",
-        "archivo": "data/zona_compensacion.geojson",
-        "estilo": {
-          "color": "#7570b3",
-          "fillColor": "#7570b3",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#66c2a4",
+          "fillColor": "#66c2a4",
+          "fillOpacity": 0.36,
+          "weight": 1.1
         },
         "visible": false
       },
       {
         "id": "zonificacion_ambiental",
-        "nombre": "zonificacion ambiental",
+        "nombre": "Otras áreas de conservación",
         "archivo": "data/zonificacion_ambiental.geojson",
         "estilo": {
-          "color": "#7570b3",
-          "fillColor": "#7570b3",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#2ca25f",
+          "fillColor": "#2ca25f",
+          "fillOpacity": 0.36,
+          "weight": 1.1
         },
         "visible": false
       }
     ]
   },
   {
-    "grupo": "Comunidades",
+    "grupo": "Comunidades locales",
     "capas": [
       {
         "id": "consejo_comunidades_afro",
-        "nombre": "consejo comunidades afro",
+        "nombre": "Consejo Comunitario de Comunidades Afrocolombianas",
         "archivo": "data/consejo_comunidades_afro.geojson",
         "estilo": {
-          "color": "#e7298a",
-          "fillColor": "#e7298a",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#c51b7d",
+          "fillColor": "#c51b7d",
+          "fillOpacity": 0.4,
+          "weight": 1.2
         },
         "visible": false
       },
       {
         "id": "resguardo_indigenas",
-        "nombre": "resguardo indigenas",
+        "nombre": "Resguardo indígena",
         "archivo": "data/resguardo_indigenas.geojson",
         "estilo": {
-          "color": "#e7298a",
-          "fillColor": "#e7298a",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#de77ae",
+          "fillColor": "#de77ae",
+          "fillOpacity": 0.4,
+          "weight": 1.2
         },
         "visible": false
       },
       {
         "id": "zona_reserva_campesina",
-        "nombre": "zona reserva campesina",
+        "nombre": "Zona de Reserva Campesina",
         "archivo": "data/zona_reserva_campesina.geojson",
         "estilo": {
-          "color": "#e7298a",
-          "fillColor": "#e7298a",
-          "fillOpacity": 0.35,
-          "weight": 0.8
+          "color": "#f1b6da",
+          "fillColor": "#f1b6da",
+          "fillOpacity": 0.45,
+          "weight": 1.2
         },
         "visible": false
       }
