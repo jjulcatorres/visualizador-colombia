@@ -389,7 +389,11 @@
 
       const camposOcultos = new Set(["nombre", "grupo", "capa"]);
 
-      let html = `<strong>${normalizarTexto(nombre)}</strong>`;
+      let html = `
+        <div style="text-align:center; font-weight:700; margin-bottom:6px;">
+          ${normalizarTexto(nombre)}
+        </div>
+      `;
 
       Object.keys(p).forEach(function(key) {
         if (camposOcultos.has(key)) {
