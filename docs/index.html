@@ -436,21 +436,18 @@
     }
 
     async function activarCapa(capaConfig, checkbox) {
-      try {
-        const layer = await cargarCapa(capaConfig);
-        layer.addTo(map);
+  try {
+    const layer = await cargarCapa(capaConfig);
+    layer.addTo(map);
 
-        if (layer.getBounds && layer.getBounds().isValid()) {
-          map.fitBounds(layer.getBounds(), { padding: [30, 30], maxZoom: 9 });
-        }
-
-        setEstado(`Activa: ${normalizarTexto(capaConfig.nombre)}`);
-      } catch (error) {
-        console.error(error);
-        checkbox.checked = false;
-        setEstado(`Error al cargar: ${normalizarTexto(capaConfig.nombre)}`);
-      }
-    }
+    // No se aplica fitBounds para mantener la ubicación y zoom actual del usuario
+    setEstado(`Activa: ${normalizarTexto(capaConfig.nombre)}`);
+  } catch (error) {
+    console.error(error);
+    checkbox.checked = false;
+    setEstado(`Error al cargar: ${normalizarTexto(capaConfig.nombre)}`);
+  }
+}
 
     function desactivarCapa(capaConfig) {
       const layer = capasGeoJson[capaConfig.id];
