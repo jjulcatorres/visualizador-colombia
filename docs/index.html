@@ -319,7 +319,7 @@
   <section class="titulo-mapa">
     <h1>Proyectos y solicitudes mineras para extraer cobre en Colombia</h1>
     <p>
-      Consulta la ubicación de los títulos y solicitudes mineras para extraer cobre, su estado y si se superponen con comunidades locales y/o áreas de importancia ambiental.
+      Consulta la ubicación de los títulos y solicitudes mineras para extraer cobre, su estado de avance y si se superponen con comunidades locales y/o áreas de importancia ambiental.
     </p>
   </section>
 
@@ -638,7 +638,9 @@
 
     async function iniciar() {
       try {
-        const response = await fetch("layers_config.json");
+        const response = await fetch("layers_config.json?v=20260621_01", {
+          cache: "no-store"
+        });
 
         if (!response.ok) {
           throw new Error("No se pudo cargar layers_config.json");

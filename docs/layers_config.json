@@ -81,7 +81,7 @@
       },
       {
         "id": "zonificacion_ambiental_excluible",
-        "nombre": "Distritos Regionales de Manejo Integrado",
+        "nombre": "Otras áreas de conservación",
         "archivo": "data/zonificacion_ambiental_excluible.geojson",
         "estilo": {
           "color": "#2ca25f",
