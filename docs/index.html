@@ -447,18 +447,6 @@
       scrollWheelZoom: true
     }).setView(vistaColombia.center, vistaColombia.zoom);
 
-    /* MOBILE_VIEW_COLOMBIA_START */
-    const vistaColombiaMovil = {
-      center: [4.6, -74.1],
-      zoom: 5
-    };
-
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      map.setView(vistaColombiaMovil.center, vistaColombiaMovil.zoom);
-      actualizarMinimap();
-    }
-    /* MOBILE_VIEW_COLOMBIA_END */
-
 
 
     L.control.zoom({
@@ -759,6 +747,32 @@
         setEstado("Error al iniciar el visualizador.");
       }
     }
+
+
+    /* MOBILE_VIEW_COLOMBIA_START */
+    function aplicarVistaMovilColombia() {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+
+        // Vista general del país en móvil
+        const boundsColombiaMovil = L.latLngBounds(
+          [-4.8, -79.5],
+          [13.5, -66.5]
+        );
+
+        map.fitBounds(boundsColombiaMovil, {
+          padding: [18, 18],
+          animate: false
+        });
+
+        setTimeout(function() {
+          map.invalidateSize();
+        }, 250);
+      }
+    }
+
+    aplicarVistaMovilColombia();
+    /* MOBILE_VIEW_COLOMBIA_END */
+
 
     iniciar();
   </script>
