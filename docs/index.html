@@ -310,6 +310,71 @@
         margin-bottom: 18px !important;
       }
     }
+  
+    /* MOBILE_PANEL_PATCH_START */
+    @media (max-width: 768px) {
+
+      /* Oculta el cuadro grande de título/descripcion en móvil */
+      .titulo-mapa {
+        display: none !important;
+      }
+
+      /* Panel móvil más limpio */
+      .panel-capas {
+        top: 12px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
+        max-width: none !important;
+        max-height: 52vh !important;
+        overflow-y: auto !important;
+        border-radius: 10px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+      }
+
+      /* Encabezado del panel */
+      .panel-header {
+        padding: 14px 16px 12px 16px !important;
+      }
+
+      /* Oculta solo en móvil el título "Capas" */
+      .panel-header h2 {
+        display: none !important;
+      }
+
+      /* Descripción móvil */
+      .panel-header p {
+        margin: 0 !important;
+        font-size: 14px !important;
+        line-height: 1.35 !important;
+        color: #333 !important;
+        font-weight: 500 !important;
+        white-space: pre-line !important;
+      }
+
+      /* Oculta botones solo en móvil */
+      .panel-actions {
+        display: none !important;
+      }
+
+      /* Botones de grupos más cómodos para tocar */
+      .grupo-btn {
+        padding: 12px 14px !important;
+        font-size: 16px !important;
+      }
+
+      .capa-item {
+        padding: 9px 14px !important;
+        font-size: 15px !important;
+      }
+
+      .capa-color {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+    /* MOBILE_PANEL_PATCH_END */
+    
   </style>
 </head>
 
@@ -659,5 +724,39 @@
 
     iniciar();
   </script>
+
+  <script>
+    /* MOBILE_PANEL_TEXT_PATCH_START */
+    (function() {
+      const descripcionMovil = "Consulta la ubicación de títulos y solicitudes mineras para extraer cobre en Colombia, su estado y su posible superposición con comunidades locales y áreas de importancia ambiental.\n\nActiva o desactiva las capas a continuación.";
+      const mq = window.matchMedia("(max-width: 768px)");
+
+      function aplicarTextoPanelMovil() {
+        const textoPanel = document.querySelector(".panel-header p");
+
+        if (!textoPanel) return;
+
+        if (!textoPanel.dataset.desktopText) {
+          textoPanel.dataset.desktopText = textoPanel.textContent.trim();
+        }
+
+        if (mq.matches) {
+          textoPanel.textContent = descripcionMovil;
+        } else {
+          textoPanel.textContent = textoPanel.dataset.desktopText;
+        }
+      }
+
+      aplicarTextoPanelMovil();
+
+      if (mq.addEventListener) {
+        mq.addEventListener("change", aplicarTextoPanelMovil);
+      } else if (mq.addListener) {
+        mq.addListener(aplicarTextoPanelMovil);
+      }
+    })();
+    /* MOBILE_PANEL_TEXT_PATCH_END */
+  </script>
+    
 </body>
 </html>
