@@ -447,6 +447,19 @@
       scrollWheelZoom: true
     }).setView(vistaColombia.center, vistaColombia.zoom);
 
+    /* MOBILE_VIEW_COLOMBIA_START */
+    const vistaColombiaMovil = {
+      center: [4.6, -74.1],
+      zoom: 4
+    };
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      map.setView(vistaColombiaMovil.center, vistaColombiaMovil.zoom);
+      actualizarMinimap();
+    }
+    /* MOBILE_VIEW_COLOMBIA_END */
+
+
     L.control.zoom({
       position: "bottomleft"
     }).addTo(map);
