@@ -57,7 +57,7 @@
       },
       {
         "id": "sistema_area_protegida_excluible",
-        "nombre": "Área Natural Protegida - SINAP",
+        "nombre": "Otras áreas protegidas del SINAP",
         "archivo": "data/sistema_area_protegida_excluible.geojson",
         "estilo": {
           "color": "#238b45",
@@ -123,6 +123,23 @@
     ]
   },
   {
+    "grupo": "Delimitación de otras áreas ambientales",
+    "capas": [
+      {
+        "id": "area_protegida_sinap",
+        "nombre": "Otras áreas protegidas del SINAP",
+        "archivo": "data/area_protegida_sinap.geojson",
+        "estilo": {
+          "color": "#66a61e",
+          "fillColor": "#66a61e",
+          "fillOpacity": 0.35,
+          "weight": 0.9
+        },
+        "visible": false
+      }
+    ]
+  },
+  {
     "grupo": "Comunidades locales",
     "capas": [
       {
@@ -158,23 +175,6 @@
           "fillColor": "#f1b6da",
           "fillOpacity": 0.45,
           "weight": 1.2
-        },
-        "visible": false
-      }
-    ]
-  },
-  {
-    "grupo": "Delimitación de otras áreas ambientales",
-    "capas": [
-      {
-        "id": "area_protegida_sinap",
-        "nombre": "area protegida SINAP",
-        "archivo": "data/area_protegida_sinap.geojson",
-        "estilo": {
-          "color": "#66a61e",
-          "fillColor": "#66a61e",
-          "fillOpacity": 0.35,
-          "weight": 0.9
         },
         "visible": false
       }
